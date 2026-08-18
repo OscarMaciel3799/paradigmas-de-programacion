@@ -1,0 +1,24 @@
+3.Evalúe los siguientes Mensajes Binarios. 
+    a. 'hola', ' aquí estoy' 
+    b. #(1 2 3), #(4 5 6) 
+    c. 4 = 5 
+    d. #(1 2 $a), #($b ‘cd’) 
+
+
+Cómo correrlo:
+
+Copiá todo el bloque de abajo en un Playground de Pharo y ejecutalo entero con Ctrl+D (Do it). 
+Los resultados van apareciendo en el Transcript, uno por línea.
+
+Transcript show: 'Ej 3.a: '; show: ('hola', ' aquí estoy') printString; cr.
+Transcript show: 'Ej 3.b: '; show: (#(1 2 3), #(4 5 6) ) printString; cr.
+Transcript show: 'Ej 3.c: '; show: (4 = 5) printString; cr.
+Transcript show: 'Ej 3.d: '; show: (#(1 2 $a), #($b 'cd')) printString; cr.
+
+
+Resultados obtenidos
+
+Ej 3.a: 'hola aquí estoy'
+Ej 3.b: #(1 2 3 4 5 6)
+Ej 3.c: false
+Ej 3.d: #(1 2 $a $b 'cd')
