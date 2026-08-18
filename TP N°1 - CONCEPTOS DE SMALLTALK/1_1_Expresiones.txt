@@ -13,7 +13,6 @@
     l. Date today
     m. Time now
 
-
 Cómo correrlo:
 
 Copiá todo el bloque de abajo en un Playground de Pharo y ejecutalo entero con Ctrl+D (Do it). 
