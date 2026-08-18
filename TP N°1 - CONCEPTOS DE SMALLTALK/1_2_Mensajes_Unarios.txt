@@ -1,0 +1,34 @@
+2.Evalúe los siguientes Mensajes Unarios. 
+    a. #( 'arreglo' 'de' 'strings' ) size 
+    b. 'Hoy es Jueves' asUpperCase 
+    c. 'hola aquí estoy' reversed 
+    d. #( 4 'cinco' 6 7 ) reversed 
+    e. $A asciiValue 
+    f. 65 asCharacter 
+    g. ‘cuál es la longitud de esta oración?’ size 
+
+
+Cómo correrlo:
+
+Copiá todo el bloque de abajo en un Playground de Pharo y ejecutalo entero con Ctrl+D (Do it). 
+Los resultados van apareciendo en el Transcript, uno por línea.
+
+
+Transcript show: 'Ej 2.a: '; show: (#( 'arreglo' 'de' 'strings' ) size ) printString; cr.
+Transcript show: 'Ej 2.b: '; show: ('Hoy es Jueves' asUppercase) printString; cr.
+Transcript show: 'Ej 2.c: '; show: ('hola aquí estoy' reversed) printString; cr.
+Transcript show: 'Ej 2.d: '; show: (#( 4 'cinco' 6 7 ) reversed) printString; cr.
+Transcript show: 'Ej 2.e: '; show: ($A asciiValue ) printString; cr.
+Transcript show: 'Ej 2.f: '; show: (65 asCharacter) printString; cr.
+Transcript show: 'Ej 2.g: '; show: ('cuál es la longitud de esta oración?' size) printString; cr.
+
+
+Resultados obtenidos
+
+Ej 2.a: 3
+Ej 2.b: 'HOY ES JUEVES'
+Ej 2.c: 'yotse íuqa aloh'
+Ej 2.d: #(7 6 'cinco' 4)
+Ej 2.e: 65
+Ej 2.f: $A
+Ej 2.g: 36
