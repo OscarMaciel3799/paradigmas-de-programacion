@@ -128,7 +128,44 @@ Esto es diferente de la precedencia matemática tradicional, donde la
 multiplicación tendría prioridad.
 
 
-## 4. Paréntesis
+## 4. Mensajes anidados
+
+El receptor o los argumentos de un mensaje pueden ser el resultado de otros
+mensajes.
+
+Por ejemplo:
+
+    'hola' size + 4
+
+Primero se evalúa el mensaje unario:
+
+    'hola' size
+
+que devuelve `4`, y luego:
+
+    4 + 4
+
+Resultado:
+
+    8
+
+El orden de evaluación visto anteriormente permite determinar cómo se resuelven
+expresiones más complejas.
+
+Por ejemplo:
+
+    3 + 4 * 2
+
+Como `+` y `*` son mensajes binarios y tienen la misma prioridad, se evalúan
+de izquierda a derecha:
+
+    (3 + 4) * 2
+
+Resultado:
+
+    14
+
+## 5. Paréntesis
 
 Los paréntesis permiten modificar explícitamente el orden de evaluación.
 
@@ -146,8 +183,7 @@ Resultado:
 
     14
 
-
-## 5. Resumen
+## 6. Resumen
 
 Para leer una expresión Smalltalk:
 
