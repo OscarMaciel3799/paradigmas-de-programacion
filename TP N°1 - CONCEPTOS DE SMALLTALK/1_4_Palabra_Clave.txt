@@ -1,0 +1,35 @@
+4.Evalúe los siguientes Mensajes de Palabra Clave. 
+    a. 'Esto es una prueba' at: 3 
+    b. 'Hola' includes: $o 
+    c. 'hola' at: 1 put: $H 
+    d. 'Paradigmas de Programación' copyFrom: 4 to: 9 
+    e. #( 9 8 7 6 5 ) at: 3 
+    f. #( 1 ( 2 3 ) 4 5 ) includes: #( 2 3 )  
+    g. #( 9 8 7 6 5 ) copyFrom: 1 to: 2 
+    h. Array new: 10 
+
+Cómo correrlo:
+
+Copiá todo el bloque de abajo en un Playground de Pharo y ejecutalo entero con Ctrl+D (Do it). 
+Los resultados van apareciendo en el Transcript, uno por línea.
+
+Transcript show: 'Ej 4.a: '; show: ('Esto es una prueba' at: 3 ) printString; cr.
+Transcript show: 'Ej 4.b: '; show: ('Hola' includes: $o ) printString; cr.
+Transcript show: 'Ej 4.c: '; show: ('hola' at: 1 put: $H ) printString; cr.
+Transcript show: 'Ej 4.d: '; show: ('Paradigmas de Programación' copyFrom: 4 to: 9 ) printString; cr.
+Transcript show: 'Ej 4.e: '; show: (#( 9 8 7 6 5 ) at: 3) printString; cr.
+Transcript show: 'Ej 4.f: '; show: (#( 1 ( 2 3 ) 4 5 ) includes: #( 2 3 )) printString; cr.
+Transcript show: 'Ej 4.g: '; show: (#( 9 8 7 6 5 ) copyFrom: 1 to: 2 ) printString; cr.
+Transcript show: 'Ej 4.h: '; show: (Array new: 10 ) printString; cr.
+
+
+Resultados obtenidos
+
+Ej 4.a: $t
+Ej 4.b: true
+Ej 4.c: Error, es un string literal, no puede ser modificado.
+Ej 4.d: 'adigma'
+Ej 4.e: 7
+Ej 4.f: true
+Ej 4.g: #(9 8)
+Ej 4.h: #(nil nil nil nil nil nil nil nil nil nil)
