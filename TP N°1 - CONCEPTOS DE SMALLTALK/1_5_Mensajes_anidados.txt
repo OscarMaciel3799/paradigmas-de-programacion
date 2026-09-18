@@ -1,0 +1,47 @@
+5.Mensajes anidados. Evaluarlos y de ser necesario, colocar paréntesis para mostrar de que manera 
+ST evalúa las expresiones. 
+    a. 'hola' size + 4 
+    b. 'ahora' size + #( 1 2 3 4 ) size 
+    c. #( 1 12 24 36) includes: 4 factorial 
+    d. 3 + 4 * 2 
+    e. 3 + ( 4 * 2 ) 
+    f. 
+    4 factorial between: 3 + 4 and: 'hola' size * 7 
+    g. 'hola' at: ( #( 5 3 1 ) at: 2 ) 
+    h. 6 + 9 asString 
+    i. Array with: 1 with: 'hola' with: (1/3) 
+
+Cómo correrlo:
+
+Copiá todo el bloque de abajo en un Playground de Pharo y ejecutalo entero con Ctrl+D (Do it). 
+Los resultados van apareciendo en el Transcript, uno por línea.
+
+Transcript show: 'Ej 5.a: '; show: ('hola' size + 4) printString; cr.
+Transcript show: 'Ej 5.b: '; show: ('ahora' size + #( 1 2 3 4 ) size) printString; cr.
+Transcript show: 'Ej 5.c: '; show: (#( 1 12 24 36) includes: 4 factorial) printString; cr.
+Transcript show: 'Ej 5.d: '; show: (3 + 4 * 2) printString; cr.
+Transcript show: 'Ej 5.e: '; show: (3 + ( 4 * 2 )) printString; cr.
+Transcript show: 'Ej 5.f: '; show: (4 factorial between: 3 + 4 and: 'hola' size * 7) printString; cr.
+Transcript show: 'Ej 5.g: '; show: ('hola' at: ( #( 5 3 1 ) at: 2 )) printString; cr.
+Transcript show: 'Ej 5.h: '; show: (6 + 9 asString) printString; cr.
+Transcript show: 'Ej 5.h.2: '; show: ((6 + 9) asString) printString; cr.
+Transcript show: 'Ej 5.i: '; show: (Array with: 1 with: 'hola' with: (1/3)) printString; cr.
+
+
+Resultados obtenidos
+
+Ej 5.a: 8
+Ej 5.b: 9
+Ej 5.c: true
+Ej 5.d: 14
+Ej 5.e: 11
+Ej 5.f: true
+Ej 5.g: $l
+Ej 5.h: Error, por orden de ejecucion, primero se ejecuta 9 asString porque asString es un mensaje unario. 
+Luego Smalltalk intenta realizar:
+    6 + '9'
+Esto produce un error porque no se puede sumar un número con un String.
+Para realizar primero la suma se utilizan paréntesis:
+    (6 + 9) asString
+Ej 5.h.2: '15'
+Ej 5.i: {1. 'hola'. (1/3)}
