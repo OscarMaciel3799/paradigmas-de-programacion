@@ -1,0 +1,31 @@
+7.Comparando Objetos. Evaluar c/u, verificar resultados y en caso de error indicar la expresión co
+rrecta. 
+    a. 3 < 4     
+    b. #( 1 2 3 4) = #(1 2 3 4) 
+    c. 'hola' <= 'adios'  
+    d. 5 = 2 + 3 
+    e. 5 = (2 + 3) 
+
+Cómo correrlo:
+
+Copiá todo el bloque de abajo en un Playground de Pharo y ejecutalo entero con Ctrl+D (Do it). 
+Los resultados van apareciendo en el Transcript, uno por línea.
+
+Transcript show: 'Ej 7.a: '; show: (3 < 4) printString; cr.
+Transcript show: 'Ej 7.b: '; show: (#( 1 2 3 4) = #(1 2 3 4)) printString; cr.
+Transcript show: 'Ej 7.c: '; show: ('hola' <= 'adios') printString; cr.
+Transcript show: 'Ej 7.d: '; show: (5 = 2 + 3) printString; cr.
+Transcript show: 'Ej 7.e: '; show: (5 = (2 + 3)) printString; cr.
+
+
+Resultados obtenidos
+
+Ej 7.a: true
+Ej 7.b: true
+Ej 7.c: false
+Ej 7.d:  Error. En Smalltalk, "=" y "+" son mensajes binarios y tienen la misma precedencia, 
+    por lo que se evalúan de izquierda a derecha.
+    Primero se evalúa 5 = 2, cuyo resultado es false. Luego intenta evaluar false + 3, 
+    lo que produce un error. La forma correcta para realizar esa comparación es:
+    5 = (2 + 3)
+Ej 7.e: true
