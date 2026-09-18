@@ -1,0 +1,41 @@
+8.Bloques de código. (Recordar que un bloque puede tener argumentos) 
+    a. [ $a isVowel ] value 
+    b. [ $b isVowel ] value  
+    c. [ 3+4 . 'hola' asUpperCase ] value 
+    d. | bloque | 
+        bloque:=[ 'Hola ', ' como estás ?' ]. 
+        bloque value. 
+    e. [ :c |  c isVowel ] value: $a 
+    f. [ :c |  c isVowel ] value: $b 
+    g. | bloque resp | 
+        bloque:=[ :a :b |  a , b]. 
+        resp:=bloque value: 'Hola ' value: ' como estás ?'. 
+        resp  
+
+Cómo correrlo:
+
+Copiá todo el bloque de abajo en un Playground de Pharo y ejecutalo entero con Ctrl+D (Do it). 
+Los resultados van apareciendo en el Transcript, uno por línea.
+
+| bloqued bloqueg resp | 
+Transcript show: 'Ej 8.a: '; show: ([ $a isVowel ] value printString); cr.
+Transcript show: 'Ej 8.b: '; show: ([ $b isVowel ] value printString); cr.
+Transcript show: 'Ej 8.c: '; show: ([ 3+4 . 'hola' asUppercase ] value printString); cr.
+bloqued:=[ 'Hola ', ' como estás ?' ]. bloqued value.
+Transcript show: 'Ej 8.d: '; show: (bloqued value printString); cr.
+Transcript show: 'Ej 8.e: '; show: (([ :c | c isVowel ] value: $a) printString); cr.
+Transcript show: 'Ej 8.f: '; show: (([ :c | c isVowel ] value: $b) printString); cr.
+bloqueg:=[ :a :b |  a , b]. 
+resp:=bloqueg value: 'Hola ' value: ' como estás ?'. 
+resp.
+Transcript show: 'Ej 8.f: '; show: resp; cr.
+
+Resultados obtenidos
+
+Ej 8.a: true
+Ej 8.b: false
+Ej 8.c: 'HOLA'
+Ej 8.d: 'Hola  como estás ?'
+Ej 8.e: true
+Ej 8.f: false
+Ej 8.f: Hola  como estás ?
