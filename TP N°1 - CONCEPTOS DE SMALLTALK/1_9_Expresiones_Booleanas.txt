@@ -1,0 +1,29 @@
+9. Expresiones Booleanas 
+    a. 5 < 2 or: [ $a isVowel ] 
+    b. 5 < 2       
+    c. (5 < 2) not        
+    d. 5 < 2 and: [ $a isVowel ]    
+    e. (5 < 2) not  and: [ $a isVowel ]                                                              
+    f. (5 < 2) not  or:  [ 'hola' size < 2 and: [ $a isVowel ] ] 
+
+Cómo correrlo:
+
+Copiá todo el bloque de abajo en un Playground de Pharo y ejecutalo entero con Ctrl+D (Do it). 
+Los resultados van apareciendo en el Transcript, uno por línea.
+
+Transcript show: 'Ej 9.a: '; show: (5 < 2 or: [ $a isVowel ]) printString; cr.
+Transcript show: 'Ej 9.b: '; show: (5 < 2) printString; cr.
+Transcript show: 'Ej 9.c: '; show: ((5 < 2) not ) printString; cr.
+Transcript show: 'Ej 9.d: '; show: (5 < 2 and: [ $a isVowel ]) printString; cr.
+Transcript show: 'Ej 9.e: '; show: ((5 < 2) not  and: [ $a isVowel ]) printString; cr.
+Transcript show: 'Ej 9.f: '; show: ((5 < 2) not  or:  [ 'hola' size < 2 and: [ $a isVowel ] ] ) printString; cr.
+
+
+Resultados obtenidos
+
+Ej 9.a: true
+Ej 9.b: false
+Ej 9.c: true
+Ej 9.d: false
+Ej 9.e: true
+Ej 9.f: true
