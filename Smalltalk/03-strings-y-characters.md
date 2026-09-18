@@ -41,11 +41,11 @@ Resultado:
 
     4
 
-### `asUpperCase`
+### `asUppercase`
 
 Devuelve el String convertido a mayúsculas.
 
-    'hola' asUpperCase
+    'hola' asUppercase
 
 Resultado:
 
