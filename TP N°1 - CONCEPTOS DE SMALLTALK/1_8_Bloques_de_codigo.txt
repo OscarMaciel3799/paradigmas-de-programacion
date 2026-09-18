@@ -30,6 +30,7 @@ resp:=bloqueg value: 'Hola ' value: ' como estás ?'.
 resp.
 Transcript show: 'Ej 8.f: '; show: resp; cr.
 
+
 Resultados obtenidos
 
 Ej 8.a: true
